@@ -1,0 +1,33 @@
+th.destaque {
+   color:black;
+ 
+}
+h1.destaque{
+    color: black;    
+}
+h2.destaque{
+    color:darkgray;    
+}
+tr.normal1{
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+}
+tr.normal2{
+    color:darkgray;
+    text-align: center;
+}
+tr.destaque{
+    color: white;
+    background-color:red;
+    text-align: center;
+}
+h3.destaque{
+size: 1ch;
+color:darkgray;
+}
+h4.destaque{
+    size: 1ch;
+    color:darkgray;
+}
+
