@@ -1,0 +1,17 @@
+form.formulario{
+    position: relative;
+    display:inline-table;
+    
+}
+input.text{
+    display: inline-block;
+    padding: 8px 16px;
+ 
+    background-color: darkgray;
+}
+
+button.b{
+    padding: 12px 16px;
+ 
+    background-color:lightskyblue;
+}

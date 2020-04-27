@@ -1,0 +1,9 @@
+ul.destaque{
+font-family: Arial, Helvetica, sans-serif;
+color: blue;
+size: 16ch;
+}
+h2.negrito{
+    font-weight: bold;
+    size: 40ch;
+}
