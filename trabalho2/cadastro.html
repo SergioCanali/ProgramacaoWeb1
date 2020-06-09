@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="style.css">
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <hr/>
+  <a href="cel.html">Celulares</a>
+  <a href="tv.html">TVs</a>
+  <a href="note.html">Notebooks</a>
+  <a href="#">Eletrodomésticos</a>
+  <a href="#">Periféricos</a>
+  <a href="#">Acessórios</a>
+  <a href="#">Eletroportáteis</a>
+  <a href="#">Esporte e lazer</a>
+  <hr/>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<header class = "cabecalho">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <h1 class = "titulo">
+        <i class="fa fa-headphones"></i>
+        Canali Compras
+        </h1>
+        <a href="index.html">Inicio</a>
+        <a href="#">Nossa Loja</a>
+        <a href="#">Regulamentos</a>
+        <a href="cadastro.html">Login e Cadastro</a>
+        <a class="carrinho" href="carrinho.html">Meu Carrinho
+        <i class="fa fa-shopping-cart"></i>
+        </a>
+        <form class="example" action="index.html">
+          <input type="text" placeholder="Busca.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+
+
+<h2 class="menu">
+        
+        <div class="dropdown">
+          <button class="dropbtn">Móveis</button>
+          <div class="dropdown-content">
+            <a href="#">Eletrodomésticos</a>
+            <a href="noestoque.html">Mobília</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Eletroportáteis</button>
+          <div class="dropdown-content">
+            <a href="note.html">Notebooks</a>
+            <a href="cel.html">Celulares</a>
+            <a href="#">Tablets</a>
+           
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Tv e vídeo</button>
+          <div class="dropdown-content">
+            <a href= "tv.html">Televisão</a>
+            <a href="#">Aparelhos de Som</a>
+
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Audio</button>
+          <div class="dropdown-content">
+            <a href="fone.html">Fones de Ouvido</a>
+            <a href="#">Caixas de Som</a>
+            <a href="noestoque.html">Amplificadores</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Livros</button>
+          <div class="dropdown-content">
+            <a href="noestoque.html">Leitura Acadêmica</a>
+            <a href="ficcao.html">Ficção</a>
+            <a href="ij.html">Infanto-juvenil</a>
+          </div>
+        </div>
+        
+      
+</h2>
+
+    </header>
+<div class="formu">
+  <div class= "logar">
+    <form class="logar">
+      <p>Log in</p>
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="fname" name="fname" ><br>
+      <label for="senha">Senha:</label><br>
+      <input type="text" id="senha" name="senha" ><br><br>
+      <button onclick="confirmaFormulario()" class="flex">Fazer Login</button>
+      <input type="reset" class="limp" value="Limpar">
+    </form> 
+  </div>
+
+  <div class= "cadastro">
+    <form class="cadastro">
+      <p>Cadastre-se</p>
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="fname" name="fname" ><br>
+      <label for="senha">Senha:</label><br>
+      <input type="text" id="senha" name="senha" ><br>
+      <label for="email">E-mail:</label><br>
+      <input type="text" id="email" name="email" ><br><br>
+      <button onclick="confirmaFormulario()" class="flex">Fazer Cadastro</button>
+      <input type="reset" class="limp" value="Limpar">
+    </form> 
+  </div>
+</div>
+
+
+
+<footer class="rodape">
+  <table class= "contatos">
+  <tr> 
+    <th> Contatos: </th>
+    <th> Atendimento: </th>
+    <th>Todos os direitos Reservados</th> 
+    
+  </tr>
+  <tr>
+ 
+  <th>(49)98802-6905</th>
+    <th>1234-5678</th>
+  <th>Copyright CanaliCompras 2020</th>
+  </tr>
+  <tr> 
+    <th>scanali@furb.br</th>  
+    <th>ronaldo2atendimento.com</th>
+   </tr>
+   </table>  
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
