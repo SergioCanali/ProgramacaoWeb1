@@ -1,0 +1,270 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Sistema de notas do Colégio Canali",
+    "version" : "1.0.0",
+    "title" : "Colégio Canali"
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/SergioCanali/ColegioCanali1/1.0.0",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/aluno" : {
+      "get" : {
+        "tags" : [ "alunos" ],
+        "summary" : "Retorna todos os alunos",
+        "description" : "Retorna todos os alunos\n",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Sucesso",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/aluno"
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "alunos" ],
+        "summary" : "Cria um aluno",
+        "description" : "Cria um novo aluno\n",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "nome",
+          "description" : "Nome do aluno.",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/aluno"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successo",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      }
+    },
+    "/aluno/{ci}" : {
+      "get" : {
+        "tags" : [ "alunos" ],
+        "summary" : "Retornar aluno",
+        "description" : "Retorna um aluno especifico\n",
+        "parameters" : [ {
+          "name" : "ci",
+          "in" : "path",
+          "description" : "Necessário Id do aluno.",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successo",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "alunos" ],
+        "summary" : "Modificar um aluno",
+        "description" : "Modifica um aluno\n",
+        "parameters" : [ {
+          "name" : "ci",
+          "in" : "path",
+          "description" : "Necessário Id do aluno.",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "nome",
+          "description" : "Dados do aluno.",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/aluno"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successo",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "alunos" ],
+        "summary" : "Remove um aluno",
+        "description" : "Remove um aluno\n",
+        "parameters" : [ {
+          "name" : "ci",
+          "in" : "path",
+          "description" : "Necessário Id do aluno.",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successo",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      }
+    },
+    "/aluno/{ci}/nota" : {
+      "get" : {
+        "tags" : [ "nota" ],
+        "summary" : "Grades",
+        "description" : "Retorna notas de um aluno especifico\n",
+        "parameters" : [ {
+          "name" : "ci",
+          "in" : "path",
+          "description" : "Necessário Id do aluno.",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successo",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/nota"
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "nota" ],
+        "summary" : "Cria Notas",
+        "description" : "Cria uma nota pra um aluno especifico\n",
+        "parameters" : [ {
+          "name" : "ci",
+          "in" : "path",
+          "description" : "Necessário Id do aluno.",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "notas",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/nota"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successo",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      }
+    },
+    "/aluno/{ci}/nota/{id}" : {
+      "get" : {
+        "tags" : [ "nota" ],
+        "summary" : "Notas",
+        "description" : "Retorna uma nota especifica de um aluno\n",
+        "parameters" : [ {
+          "name" : "ci",
+          "in" : "path",
+          "description" : "Necessário id do aluno.",
+          "required" : true,
+          "type" : "integer",
+          "format" : "integer"
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Necessário id da nota.",
+          "required" : true,
+          "type" : "integer",
+          "format" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successo",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "nota" ],
+        "summary" : "Remove uma nota",
+        "description" : "Remove uma nota\n",
+        "parameters" : [ {
+          "name" : "ci",
+          "in" : "path",
+          "description" : "Necessário id do aluno.",
+          "required" : true,
+          "type" : "integer",
+          "format" : "integer"
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Necessário id da nota.",
+          "required" : true,
+          "type" : "integer",
+          "format" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successo",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "aluno" : {
+      "type" : "object",
+      "required" : [ "ci", "nome" ],
+      "properties" : {
+        "nome" : {
+          "type" : "string",
+          "description" : "Nome do aluno"
+        },
+        "ci" : {
+          "type" : "integer",
+          "description" : "Id do Aluno"
+        },
+        "notas" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/nota"
+          }
+        }
+      }
+    },
+    "nota" : {
+      "type" : "object",
+      "required" : [ "id", "nota" ],
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "description" : "Id da matéria"
+        },
+        "nota" : {
+          "type" : "number",
+          "description" : "Nota do aluno"
+        }
+      }
+    }
+  }
+}
